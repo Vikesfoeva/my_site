@@ -3,9 +3,9 @@ class BuildersGame extends Component {
     state = {  } 
     render() { 
         return (
-            <React.Fragment>
+            <div className='container'>
                 <h1>The builder's game is under construction still.</h1>
-            </React.Fragment>
+            </div>
         );
     }
 }

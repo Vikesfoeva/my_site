@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AboutMe from './components/about_me';
 import BuildersGame from './components/builders_game';
+import Footer from './components/footer';
 import Navbar from './components/navbar';
 
 class App extends Component {
@@ -22,7 +23,7 @@ class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div>
         <Navbar 
             onClick = {this.handleDisplay}
             navbaritems = {this.state.navbaritems}
@@ -33,7 +34,8 @@ class App extends Component {
         <div hidden={this.state.navbaritems.buildersGame.hidden}>
           <BuildersGame />
         </div>
-      </React.Fragment>
+        <Footer />
+      </div>
     );
   };
 

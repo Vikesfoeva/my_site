@@ -3,12 +3,19 @@ class AboutMe extends Component {
     state = {  } 
     render() { 
         return (
-            <React.Fragment>
-                <h1>Hello - my name is Brandon Lenz.  I'm an aspiring fullstack developer.</h1>
-                <div>
-                    
+            <div className="container">
+                <div className="row">
+                    <h1>Hello, welcome to my website!  My name is Brandon Lenz.  I'm an aspiring fullstack developer.</h1>
                 </div>
-            </React.Fragment>
+                <br></br>
+                <div className="row">
+                    <h1>Education</h1>
+                </div>
+                <br></br>
+                <div className="row">
+                    <h1>Work Experience</h1>
+                </div>
+            </div>
         );
     }
 }
