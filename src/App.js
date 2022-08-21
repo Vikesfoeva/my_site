@@ -34,7 +34,7 @@ class App extends Component {
         <div hidden={this.state.navbaritems.buildersGame.hidden}>
           <BuildersGame />
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   };
