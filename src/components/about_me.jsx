@@ -4,7 +4,7 @@ class AboutMe extends Component {
     render() { 
         return (
             <React.Fragment>
-                <h1>Hello - my name is Brandon Lenz.  I'm an aspiring fullstack devleoper</h1>
+                <h1>Hello - my name is Brandon Lenz.  I'm an aspiring fullstack devleoper.</h1>
             </React.Fragment>
         );
     }
