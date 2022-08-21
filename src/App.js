@@ -9,11 +9,13 @@ class App extends Component {
     navbaritems: {
       aboutMe : {
         id: 'about',
-        hidden: false
+        hidden: false,
+        classes: "btn btn-primary m-2"
       },
       buildersGame: {
         id: 'buildersGame',
-        hidden: true
+        hidden: true,
+        classes: "btn btn-secondary m-2"
       }
     }
   };
@@ -23,6 +25,7 @@ class App extends Component {
       <React.Fragment>
         <Navbar 
             onClick = {this.handleDisplay}
+            navbaritems = {this.state.navbaritems}
         />
         <div hidden={this.state.navbaritems.aboutMe.hidden}>
           <AboutMe />
@@ -42,8 +45,10 @@ class App extends Component {
       const thiskey = stateKeys[i];
       if (clickedEle === thiskey) {
         navbaritems[thiskey].hidden = false;
+        navbaritems[thiskey].classes = "btn btn-primary m-2";
       } else {
         navbaritems[thiskey].hidden = true;
+        navbaritems[thiskey].classes = "btn btn-secondary m-2";
       }
     };
     
