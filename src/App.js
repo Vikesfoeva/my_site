@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import AboutMe from './components/about_me';
 import BuildersGame from './components/builders_game';
-import Footer from './components/footer';
+// import Footer from './components/footer';
 import Navbar from './components/navbar';
 
 class App extends Component {
