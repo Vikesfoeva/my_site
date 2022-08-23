@@ -6,35 +6,36 @@ class Footer extends Component {
             position: 'absolute',
             bottom: 0
         }
+        const buttonClass = "badge bg-dark m-2"
         return (
             <div style={styles}>
-                <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+                <nav className="navbar navbar-expand-lg navbar-light bg-primary">
                     <div className="collapse navbar-collapse" id="footer">
                         <ul className="navbar-nav">
                         <li className="nav-item active">
                             <a href="https://drive.google.com/file/d/1JUoxg_aDWZtRSKqsW1tt8LPRj_zAKjs6/view?usp=sharing" target="_blank" rel="noreferrer">
-                                <h4><span className="badge bg-primary m-2">
+                                <h4><span className={buttonClass}>
                                     Resume
                                 </span></h4>
                             </a>
                         </li>
                         <li className="nav-item active">
                             <a href="https://github.com/Vikesfoeva" target="_blank" rel="noreferrer">
-                                <h4><span className="badge bg-primary m-2">
+                                <h4><span className={buttonClass}>
                                     Github
                                 </span></h4>
                             </a>
                         </li>
                         <li className="nav-item">
                             <a href="https://www.linkedin.com/in/brandonlenz-pmp/" target="_blank" rel="noreferrer">
-                                <h4><span className="badge bg-primary m-2">
+                                <h4><span className={buttonClass}>
                                     LinkedIn
                                 </span></h4>
                             </a>
                         </li>
                         <li className="nav-item">
                             <a href="mailto: brandon@brandonlenz.dev" target="_blank" rel="noreferrer">
-                                <h4><span className="badge bg-primary m-2">
+                                <h4><span className={buttonClass}>
                                     Email
                                 </span></h4>
                             </a>

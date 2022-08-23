@@ -11,12 +11,12 @@ class App extends Component {
       aboutMe : {
         id: 'about',
         hidden: false,
-        classes: "btn btn-primary m-2"
+        classes: "btn btn-dark m-2"
       },
       buildersGame: {
         id: 'buildersGame',
         hidden: true,
-        classes: "btn btn-secondary m-2"
+        classes: "btn btn-light m-2"
       }
     }
   };
@@ -47,10 +47,10 @@ class App extends Component {
       const thiskey = stateKeys[i];
       if (clickedEle === thiskey) {
         navbaritems[thiskey].hidden = false;
-        navbaritems[thiskey].classes = "btn btn-primary m-2";
+        navbaritems[thiskey].classes = "btn btn-dark m-2";
       } else {
         navbaritems[thiskey].hidden = true;
-        navbaritems[thiskey].classes = "btn btn-secondary m-2";
+        navbaritems[thiskey].classes = "btn btn-light m-2";
       }
     };
     

@@ -6,7 +6,7 @@ class Navbar extends Component {
         const builderState = this.props.navbaritems.buildersGame.classes;
         return (
             <div>
-                <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+                <nav className="navbar navbar-expand-lg navbar-light bg-primary">
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                         <li className="nav-item active">
