@@ -21,7 +21,7 @@ class AboutMe extends Component {
                             
                             <div className="col"align="center">
                                 <h4>
-                                    <a href="https://oregonstate.edu/" target="_blank" rel="noreferrer" className="text-decoration-none">
+                                    <a href="https://oregonstate.edu/" target="_blank" rel="noreferrer" className="text-decoration-none text-dark">
                                         Oregon State University
                                     </a>
                                 </h4>
@@ -36,7 +36,7 @@ class AboutMe extends Component {
                             </div>
                             <div className="col" align="center">
                                 <h4>
-                                    <a href="https://www.wisc.edu/" target="_blank" rel="noreferrer" className="text-decoration-none">
+                                    <a href="https://www.wisc.edu/" target="_blank" rel="noreferrer" className="text-decoration-none text-dark">
                                         University of Wisconsin, Madison    
                                     </a>
                                 </h4>
