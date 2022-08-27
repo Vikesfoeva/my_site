@@ -26,7 +26,7 @@ class AboutMe extends Component {
         return (
             <div className="container">
                 <div className="row">
-                    <h1>Hello, welcome to my website!  My name is Brandon Lenz.  I'm an aspiring fullstack developer.</h1>
+                    <h1>Hello!  My name is Brandon Lenz.  I'm an aspiring fullstack developer.</h1>
                 </div>
                 <br></br>
                 <div className="row m-2">
@@ -39,9 +39,9 @@ class AboutMe extends Component {
                             <div className="col-md" style={divStyles}>
                                 <div className='container'>
                                     <div className='row'>
-                                        <h3><a href="https://oregonstate.edu/" target="_blank" rel="noreferrer" className="text-decoration-none text-dark">
+                                        <h4><a href="https://oregonstate.edu/" target="_blank" rel="noreferrer" className="link-dark">
                                             Oregon State University
-                                        </a></h3>
+                                        </a></h4>
                                     </div>
                                     <div className='row'>
                                         <h5>B.S. in Computer Science</h5>
@@ -61,9 +61,9 @@ class AboutMe extends Component {
                             <div className="col-md" style={divStyles}>
                                 <div className="container">
                                     <div className='row'>                                
-                                        <h3><a href="https://www.wisc.edu/" target="_blank" rel="noreferrer" className="text-decoration-none text-dark">
+                                        <h4><a href="https://www.wisc.edu/" target="_blank" rel="noreferrer" className="link-dark">
                                             University of Wisconsin, Madison    
-                                        </a></h3>
+                                        </a></h4>
                                     </div>
                                     <div className='row'>
                                         <h5>B.S. in Nuclear Engineering with minors in Mathematics and German Language</h5>
