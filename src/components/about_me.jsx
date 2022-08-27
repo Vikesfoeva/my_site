@@ -1,15 +1,27 @@
 import React, { Component } from 'react';
-import OSULogo from '../images/osulogo.svg'
 
 class AboutMe extends Component {
 
     render() { 
         const imageStyles = {
-            maxWidth: "85%"
+            maxWidth: "85%",
+            tintColor: 'gray',
+            opacity: 0.6,
+            transition: '0.4s'
         }
         const divStyles = {
             display: "flex",
             alignItems: 'center'
+        }
+
+        const wiscLogo = require('../images/uwmadison.0fd53df6.png');
+        const osuLogo = require('../images/OSU_horizontal_2C_O_over_B.png');
+
+        function upOpacity(ele) {
+            ele.target.style.opacity = 1;
+        }
+        function downOpacity(ele) {
+            ele.target.style.opacity = .6;
         }
         return (
             <div className="container">
@@ -22,20 +34,20 @@ class AboutMe extends Component {
                     <div className="container m-1">
                         <div className="row">
                             <div className="col-lg">
-                                <img src={OSULogo} alt="Oregon State University Logo" style={imageStyles}/>
+                                <img src={osuLogo} alt="Oregon State University Logo" style={imageStyles} onMouseOver={upOpacity} onMouseLeave={downOpacity}/>
                             </div>
                             <div className="col-md" style={divStyles}>
                                 <div className='container'>
                                     <div className='row'>
-                                        <h4><a href="https://oregonstate.edu/" target="_blank" rel="noreferrer" className="text-decoration-none text-dark">
+                                        <h3><a href="https://oregonstate.edu/" target="_blank" rel="noreferrer" className="text-decoration-none text-dark">
                                             Oregon State University
-                                        </a></h4>
+                                        </a></h3>
                                     </div>
                                     <div className='row'>
-                                        <h6>B.S. in Computer Science</h6>
+                                        <h5>B.S. in Computer Science</h5>
                                     </div>
                                     <div className='row'>
-                                        <h6>September 2020 - Expected Spring 2023</h6>
+                                        <h5>September 2020 - Expected Spring 2023</h5>
                                     </div>
                                 </div>                         
                             </div>
@@ -43,21 +55,21 @@ class AboutMe extends Component {
                         <div className="w-100 m-4" />
                         <div className="row">
                             <div className="col-lg">
-                                <img src={require('../images/uwmadison.0fd53df6.png')} alt="University of Wisconsin Madison Logo" style={imageStyles}/>
+                                <img src={wiscLogo} alt="University of Wisconsin Madison Logo" style={imageStyles} onMouseOver={upOpacity} onMouseLeave={downOpacity}/>
                             </div>
                             
                             <div className="col-md" style={divStyles}>
                                 <div className="container">
                                     <div className='row'>                                
-                                        <h4><a href="https://www.wisc.edu/" target="_blank" rel="noreferrer" className="text-decoration-none text-dark">
+                                        <h3><a href="https://www.wisc.edu/" target="_blank" rel="noreferrer" className="text-decoration-none text-dark">
                                             University of Wisconsin, Madison    
-                                        </a></h4>
+                                        </a></h3>
                                     </div>
                                     <div className='row'>
-                                        <h6>B.S. in Nuclear Engineering with minors in Mathematics and German Language</h6>
+                                        <h5>B.S. in Nuclear Engineering with minors in Mathematics and German Language</h5>
                                     </div>
                                     <div className='row'>
-                                        <h6>September 2010 - May 2015</h6>
+                                        <h5>September 2010 - May 2015</h5>
                                     </div>
                                 </div>
                             </div>
