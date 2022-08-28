@@ -4,8 +4,10 @@ import BuildersGame from './components/builders_game';
 import Footer from './components/footer';
 import Headerbar from './components/headerbar';
 
-const unselectedClass = 'btn btn-light m-1 text-dark';
-const selectedClass = 'btn btn-primary m-1 text-light';
+const unselectedClassNav = 'btn btn-light m-1 text-dark';
+const selectedClassNav = 'btn btn-primary m-1 text-light';
+const unselectedClassExp = 'btn btn-light m-1 p-1 text-dark';
+const selectedClassExp = 'btn btn-primary m-1 p-1 text-light';
 
 class App extends Component {
 
@@ -14,34 +16,34 @@ class App extends Component {
       aboutMe : {
         id: 'about',
         hidden: false,
-        classes: selectedClass
+        classes: selectedClassNav
       },
       buildersGame: {
         id: 'buildersGame',
         hidden: true,
-        classes: unselectedClass
+        classes: unselectedClassNav
       }
     },
     experience : {
       director: {
           id: 'director',
-          title: 'Director, Customer Success',
+          title: 'Director',
           hidden: false,
-          classes: selectedClass,
+          classes: selectedClassExp,
           duration: 'July 2021 - Present',
           details: [
-            'Aggregate customer feedback for 10,000+ users on application, serving as a liaison to Product Team for biweekly sprint planning',
-            'Utilize exceptional communication skills to convey real unorthodox customer use cases, enhancing QA automated test coverage alongside continued identification and/or triage for product/system issues',
-            'Collaborate with executive leadership on product strategies while leading three teams of consultants in active engagement on 150 discrete customer projects, leveraging strong problem-solving and attention to detail',
-            'Achieved 3X team staff growth and 10X annual revenue growth in product line, demonstrating ability to quickly adopt existing concepts and employ new techniques', 
-            'Wrote JavaScript tools to automate team processes, reducing time spent by 40%+ on non-revenue projects for development team, thus optimizing resource allocation'
+            'Aggregate customer feedback for 10,000+ users on application',
+            'Liaison to Product Team for biweekly sprint planning',
+            'Enhance QA automated test coverage alongside continued identification and/or triage for product/system issues',
+            'Collaborate with executive leadership on product strategies',
+            'Automated team processes with Javascript & GScript tools'
           ]
       },
       manager: {
           id: 'manager',
-          title: 'Manager, Customer Success',
+          title: 'Manager',
           hidden: true,
-          classes: unselectedClass,
+          classes: unselectedClassExp,
           duration: 'January 2020 - June 2021',
           details: [
             'Collect, prioritize, and develop initial requirements for new product functionality based on customer feedback',
@@ -51,9 +53,9 @@ class App extends Component {
       },
       supervisor: {
           id: 'supervisor',
-          title: 'Supervisor, Customer Success',
+          title: 'Supervisor',
           hidden: true,
-          classes: unselectedClass,
+          classes: unselectedClassExp,
           duration: 'April 2018 - December 2019',
           details: [
             'Developed tools in Microsoft Excel VBA and Google Sheets GScript, working independently with teams',
@@ -65,7 +67,7 @@ class App extends Component {
           id: 'accountConsult',
           title: 'Account Consultant',
           hidden: true,
-          classes: unselectedClass,
+          classes: unselectedClassExp,
           duration: 'January 2016 - March 2018',
           details: [
             'Demonstrated clarity and technical knowledge, leading and presenting at weekly meetings with executive team',
@@ -77,7 +79,7 @@ class App extends Component {
           id: 'softConsult',
           title: 'Software Consultant',
           hidden: true,
-          classes: unselectedClass,
+          classes: unselectedClassExp,
           duration: 'July 2015 - December 2015',
           details: [
             'Leveraged technical expertise, working within software configuration constraints to find creative solutions',
@@ -111,15 +113,24 @@ class App extends Component {
   handleDisplay = (clickedEle, interactedComp) => {
     const newObjectCopy = Object(this.state[interactedComp]);
     const stateKeys = Object.keys(newObjectCopy);
+    let thisSelect, thisUnselect;
+    
+    if (interactedComp === 'navbaritems') {
+      thisSelect = selectedClassNav
+      thisUnselect = unselectedClassNav
+    } else if (interactedComp === 'experience') {
+      thisSelect = selectedClassExp
+      thisUnselect = unselectedClassExp
+    }
     
     for (let i = 0; i < stateKeys.length; i++) {
       const thiskey = stateKeys[i];
       if (clickedEle === thiskey) {
         newObjectCopy[thiskey].hidden = false;
-        newObjectCopy[thiskey].classes = selectedClass;
+        newObjectCopy[thiskey].classes = thisSelect;
       } else {
         newObjectCopy[thiskey].hidden = true;
-        newObjectCopy[thiskey].classes = unselectedClass;
+        newObjectCopy[thiskey].classes = thisUnselect;
       }
     };
     

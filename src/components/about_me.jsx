@@ -85,41 +85,42 @@ class AboutMe extends Component {
                 <div className="row p-1">
                     <h1 className='text-center text-secondary'>Work Experience</h1>
                     <h2 className='text-primary text-center'>QGenda</h2>
-                    <div id="QGenda_Experience">
-                        <div className='container'>
-                            <div className='row' id='master_row'>
-                                <div className='col col-3' id='master_col'>                        
-                                    {
-                                    Object.keys(this.props.experience).map((inKey) => 
-                                        <div className='row' key={this.props.experience[inKey].id + 'row'}>
-                                            <div className='col' key={this.props.experience[inKey].id + 'col'}>
+                    <div className='container' id="experience">
+                        <div className='row' id='master_row'>
+                            <div className='col-2' id='master_col' style={{minWidth:'90px'}}>                        
+                                {
+                                Object.keys(this.props.experience).map((inKey) => 
+                                    <div className='row' key={this.props.experience[inKey].id + 'row'}>
+                                        <div className='col' key={this.props.experience[inKey].id + 'col'}>
 
-                                            <span className={this.props.experience[inKey].classes} key={this.props.experience[inKey].id+'span'} 
-                                                onClick={() => this.props.onClick(this.props.experience[inKey].id, 'experience')}>
-                                                {this.props.experience[inKey].title}
-                                                
-                                            </span>
-                                        </div>
+                                        <span className={this.props.experience[inKey].classes} key={this.props.experience[inKey].id+'span'} 
+                                            onClick={() => this.props.onClick(this.props.experience[inKey].id, 'experience')} style={{
+                                                fontSize: '14px',
+                                                marginRight: '2px'
+                                            }}>
+                                            {this.props.experience[inKey].title}
+                                            
+                                        </span>
                                     </div>
-                                    )}
                                 </div>
-                                <div className='col' id='col_role-info'>
-                                        {
-                                            Object.keys(this.props.experience).map((inKey) => 
-                                                <div key={this.props.experience[inKey].id + 'info'} hidden={this.props.experience[inKey].hidden}>
-                                                    <h4>{this.props.experience[inKey].title}</h4>
-                                                    <h5>{this.props.experience[inKey].duration}</h5>        
-                                                    <ul>
-                                                        {this.props.experience[inKey].details.map((element) => 
-                                                            <li key={this.props.experience[inKey].id + this.props.experience[inKey].details.indexOf(element)}>
-                                                                {element}
-                                                            </li>
-                                                        )}
-                                                    </ul>
-                                                </div>
-                                            )
-                                        }
-                                </div>
+                                )}
+                            </div>
+                            <div className='col' id='col_role-info' style={{fontSize:"14px"}}>
+                                    {
+                                        Object.keys(this.props.experience).map((inKey) => 
+                                            <div key={this.props.experience[inKey].id + 'info'} hidden={this.props.experience[inKey].hidden}>
+                                                <h5>{this.props.experience[inKey].title}</h5>
+                                                <h6>{this.props.experience[inKey].duration}</h6>        
+                                                <ul>
+                                                    {this.props.experience[inKey].details.map((element) => 
+                                                        <li key={this.props.experience[inKey].id + this.props.experience[inKey].details.indexOf(element)}>
+                                                            {element}
+                                                        </li>
+                                                    )}
+                                                </ul>
+                                            </div>
+                                        )
+                                    }
                             </div>
                         </div>
                     </div>
