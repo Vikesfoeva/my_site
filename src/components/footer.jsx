@@ -3,22 +3,28 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 
 class Footer extends Component {
     render() { 
-
+        const linkClass = 'm-0 p-1';
         const buttonClass = "badge bg-primary m-0 p-1 b-0 "
+        const urls = {
+            resume: 'https://drive.google.com/file/d/1JUoxg_aDWZtRSKqsW1tt8LPRj_zAKjs6/view?usp=sharing',
+            github: 'https://github.com/Vikesfoeva',
+            linkedIn: 'https://www.linkedin.com/in/brandonlenz-pmp/',
+            email: 'mailto: brandon@brandonlenz.dev'
+        };
         return (
-            <Navbar fixed='bottom' bg='dark' variant='dark'>
-                <Container style={{justifyContent:'center'}}>
+            <Navbar fixed='bottom' variant='dark' style={{backgroundColor: '#303030', minHeight:50, display:'block'}}>
+                <Container className='customerFooter' style={{justifyContent:'center'}}>
                     <Nav>
-                        <Nav.Link className='m-0 p-1' href="https://drive.google.com/file/d/1JUoxg_aDWZtRSKqsW1tt8LPRj_zAKjs6/view?usp=sharing" target="_blank" rel="noreferrer">
+                        <Nav.Link className={linkClass} href={urls.resume} target="_blank" rel="noreferrer">
                             <span className={buttonClass}>Resume</span>
                         </Nav.Link>
-                        <Nav.Link className='m-0 p-1' href="https://github.com/Vikesfoeva" target="_blank" rel="noreferrer">
+                        <Nav.Link className={linkClass} href={urls.github} target="_blank" rel="noreferrer">
                             <span className={buttonClass}> Github</span>
                         </Nav.Link>
-                        <Nav.Link className='m-0 p-1' href="https://www.linkedin.com/in/brandonlenz-pmp/" target="_blank" rel="noreferrer">
+                        <Nav.Link className={linkClass} href={urls.linkedIn} target="_blank" rel="noreferrer">
                             <span className={buttonClass}>LinkedIn</span>
                         </Nav.Link>
-                        <Nav.Link className='m-0 p-1' href='mailto: brandon@brandonlenz.dev' target="_blank" rel="noreferrer">
+                        <Nav.Link className={linkClass} href={urls.email} target="_blank" rel="noreferrer">
                             <span className={buttonClass}>Email</span>
                         </Nav.Link>
                     </Nav>

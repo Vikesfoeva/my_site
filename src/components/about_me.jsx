@@ -3,10 +3,12 @@ import React, { Component } from 'react';
 class AboutMe extends Component {
 
     render() { 
+        const hiddenImage = .6;
+        const showImage = 1;
         const imageStyles = {
             maxWidth: "85%",
             tintColor: 'gray',
-            opacity: 0.6,
+            opacity: hiddenImage,
             transition: '0.4s'
         }
         const divStyles = {
@@ -23,14 +25,9 @@ class AboutMe extends Component {
         // Logo retrieved from https://communications.oregonstate.edu/brand-guide/visual-identity/logo/request-logo-files
         // Logo guidelines https://communications.oregonstate.edu/brand-guide/visual-identity/logo-guidelines
         const osuLogo = require('../images/OSU_horizontal_2C_O_over_B.png');
-       
 
-        function upOpacity(ele) {
-            ele.target.style.opacity = 1;
-        }
-        function downOpacity(ele) {
-            ele.target.style.opacity = .6;
-        }
+        function upOpacity(ele) {ele.target.style.opacity = showImage;}
+        function downOpacity(ele) {ele.target.style.opacity = hiddenImage;}
         return (
             <div className="container">
                 <div className="row">
@@ -84,36 +81,48 @@ class AboutMe extends Component {
                         </div>
                     </div>
                 </div>
-                <br></br>
-                <div className="row m-2">
+
+                <div className="row p-1">
                     <h1>Work Experience</h1>
-                    <h2 className='text-primary'>QGenda</h2>
-                    <ul style={{listStyle: 'none'}}>
-                        <li>
-                            <ul style={{listStyle: 'none'}}>
-                            <li>Director, Customer Success</li>
-                                <ul>
-                                    <li>July 2021 - Present</li>
-                                </ul>
-                            <li>Manager, Customer Success</li>
-                                <ul>
-                                    <li>January 2020 - June 2021</li>
-                                </ul>
-                            <li>Supervisor, Customer Success</li>
-                                <ul>
-                                    <li>April 2018 - December 2019</li>
-                                </ul>
-                            <li>Account Consultant</li>
-                                <ul>
-                                    <li>January 2016 - March 2018</li>
-                                </ul>
-                            <li>Software Consultant</li>
-                                <ul>
-                                    <li>July 2015 - December 2015</li>
-                                </ul>                      
-                            </ul>
-                        </li>
-                    </ul>
+                    <h2 className='text-primary text-center'>QGenda</h2>
+                    <div id="QGenda_Experience">
+                        <div className='container'>
+                            <div className='row' id='master_row'>
+                                <div className='col col-3' id='master_col'>                        
+                                    {
+                                    Object.keys(this.props.experience).map((inKey) => 
+                                        <div className='row' key={this.props.experience[inKey].id + 'row'}>
+                                            <div className='col' key={this.props.experience[inKey].id + 'col'}>
+
+                                            <span className={this.props.experience[inKey].classes} key={this.props.experience[inKey].id+'span'} 
+                                                onClick={() => this.props.onClick(this.props.experience[inKey].id, 'experience')}>
+                                                {this.props.experience[inKey].title}
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                    )}
+                                </div>
+                                <div className='col' id='col_role-info'>
+                                        {
+                                            Object.keys(this.props.experience).map((inKey) => 
+                                                <div key={this.props.experience[inKey].id + 'info'} hidden={this.props.experience[inKey].hidden}>
+                                                    <h4>{this.props.experience[inKey].title}</h4>
+                                                    <h5>{this.props.experience[inKey].duration}</h5>        
+                                                    <ul>
+                                                        {this.props.experience[inKey].details.map((element) => 
+                                                            <li key={this.props.experience[inKey].id + this.props.experience[inKey].details.indexOf(element)}>
+                                                                {element}
+                                                            </li>
+                                                        )}
+                                                    </ul>
+                                                </div>
+                                            )
+                                        }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         );

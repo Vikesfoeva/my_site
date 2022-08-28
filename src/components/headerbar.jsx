@@ -11,13 +11,13 @@ class Headerbar extends Component {
         }
         return (
             <div style={styles}>
-                <Navbar collapseOnSelect fixed='top' expand='sm' bg='dark' variant='dark' display='block'>
+                <Navbar className='customFooter' collapseOnSelect fixed='top' expand='sm' bg='dark' variant='dark' display='block'>
                     <Container>
                         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
                         <Navbar.Collapse id='responsive-navbar-nav'>
                             <Nav>
-                                <Nav.Link className={aboutState} onClick={() => this.props.onClick('aboutMe')}>About Me</Nav.Link>
-                                <Nav.Link className={builderState} onClick={() => this.props.onClick('buildersGame')}>Builder's Game</Nav.Link>
+                                <Nav.Link className={aboutState} onClick={() => this.props.onClick('aboutMe', 'navbaritems')}>About Me</Nav.Link>
+                                <Nav.Link className={builderState} onClick={() => this.props.onClick('buildersGame', 'navbaritems')}>Builder's Game</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
