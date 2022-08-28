@@ -12,7 +12,7 @@ class Footer extends Component {
             email: 'mailto: brandon@brandonlenz.dev'
         };
         return (
-            <Navbar fixed='bottom' variant='dark' style={{backgroundColor: '#303030', minHeight:50, display:'block'}}>
+            <Navbar variant='dark' style={{backgroundColor: '#303030', minHeight:50, display:'block'}}>
                 <Container className='customerFooter' style={{justifyContent:'center'}}>
                     <Nav>
                         <Nav.Link className={linkClass} href={urls.resume} target="_blank" rel="noreferrer">

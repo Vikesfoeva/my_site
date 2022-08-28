@@ -27,7 +27,7 @@ class App extends Component {
     experience : {
       director: {
           id: 'director',
-          title: 'Director',
+          title: 'Director, Customer Success',
           hidden: false,
           classes: selectedClassExp,
           duration: 'July 2021 - Present',
@@ -41,7 +41,7 @@ class App extends Component {
       },
       manager: {
           id: 'manager',
-          title: 'Manager',
+          title: 'Manager, Customer Success',
           hidden: true,
           classes: unselectedClassExp,
           duration: 'January 2020 - June 2021',
@@ -53,7 +53,7 @@ class App extends Component {
       },
       supervisor: {
           id: 'supervisor',
-          title: 'Supervisor',
+          title: 'Supervisor, Customer Success',
           hidden: true,
           classes: unselectedClassExp,
           duration: 'April 2018 - December 2019',
@@ -70,9 +70,9 @@ class App extends Component {
           classes: unselectedClassExp,
           duration: 'January 2016 - March 2018',
           details: [
-            'Demonstrated clarity and technical knowledge, leading and presenting at weekly meetings with executive team',
-            'Contributed to High Value Client (HVC) implementations, increasing brand exposure',
-            'Collaborated with 50 consultants in customer success teams, sharing VBA/GScript automation tools'
+            'Demonstrated technical knowledge, leading and presenting with customer executive teams',
+            'Contributed to High Value Client implementations',
+            'Developed and shared VBA/GScript automation tools for customer success team'
           ]
       },
       softConsult: {
@@ -104,7 +104,8 @@ class App extends Component {
         </div>
         <div hidden={this.state.navbaritems.buildersGame.hidden}>
           <BuildersGame />
-        </div>        
+        </div>
+        <div style={{minHeight:75}} />     
         <Footer />
       </React.Fragment>
     );
