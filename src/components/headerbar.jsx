@@ -11,7 +11,7 @@ class Headerbar extends Component {
         }
         return (
             <div style={styles}>
-                <Navbar className='customFooter' collapseOnSelect fixed='top' expand='sm' bg='dark' variant='dark' display='block'>
+                <Navbar className='customFooter' collapseOnSelect fixed='top' expand='sm' variant='dark' display='block' style={{backgroundColor: '#303030'}}>
                     <Container>
                         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
                         <Navbar.Collapse id='responsive-navbar-nav'>

@@ -105,8 +105,8 @@ class App extends Component {
         <div hidden={this.state.navbaritems.buildersGame.hidden}>
           <BuildersGame />
         </div>
-        <div style={{minHeight:75}} />     
-        <Footer />
+        <div style={{minHeight:75}} />
+        <Footer /> 
       </React.Fragment>
     );
   };
@@ -116,6 +116,7 @@ class App extends Component {
     const stateKeys = Object.keys(newObjectCopy);
     let thisSelect, thisUnselect;
     
+    // Dynamicaly update which parts of the buttons we're working with
     if (interactedComp === 'navbaritems') {
       thisSelect = selectedClassNav
       thisUnselect = unselectedClassNav
