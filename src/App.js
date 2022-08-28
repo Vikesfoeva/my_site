@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import AboutMe from './components/about_me';
 import BuildersGame from './components/builders_game';
 import Footer from './components/footer';
-import Navbar from './components/navbar';
+import Headerbar from './components/headerbar';
+
+const unselectedClass = 'btn btn-light m-1 text-dark';
+const selectedClass = 'btn btn-primary m-1 text-light';
 
 class App extends Component {
 
@@ -11,12 +14,12 @@ class App extends Component {
       aboutMe : {
         id: 'about',
         hidden: false,
-        classes: "btn btn-primary m-2"
+        classes: selectedClass
       },
       buildersGame: {
         id: 'buildersGame',
         hidden: true,
-        classes: "btn btn-light m-2"
+        classes: unselectedClass
       }
     }
   };
@@ -24,7 +27,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar 
+        <Headerbar 
             onClick = {this.handleDisplay}
             navbaritems = {this.state.navbaritems}
         />
@@ -47,10 +50,10 @@ class App extends Component {
       const thiskey = stateKeys[i];
       if (clickedEle === thiskey) {
         navbaritems[thiskey].hidden = false;
-        navbaritems[thiskey].classes = "btn btn-primary m-2";
+        navbaritems[thiskey].classes = selectedClass;
       } else {
         navbaritems[thiskey].hidden = true;
-        navbaritems[thiskey].classes = "btn btn-light m-2";
+        navbaritems[thiskey].classes = unselectedClass;
       }
     };
     

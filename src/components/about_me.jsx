@@ -14,7 +14,11 @@ class AboutMe extends Component {
             alignItems: 'center'
         }
 
-        const wiscLogo = require('../images/uwmadison.0fd53df6.png');
+        // I am in no way endorsed by either institution
+        // This content is strictly intended to inform my attendance in both schools
+
+        // Logo acquired from https://brand.wisc.edu/web/logos/
+        const wiscLogo = require('../images/uw-logo-flush-web.png');
 
         // Logo retrieved from https://communications.oregonstate.edu/brand-guide/visual-identity/logo/request-logo-files
         // Logo guidelines https://communications.oregonstate.edu/brand-guide/visual-identity/logo-guidelines
@@ -45,7 +49,7 @@ class AboutMe extends Component {
                             <div className="col-md" style={divStyles}>
                                 <div className='container'>
                                     <div className='row'>
-                                        <h4 className="text-dark">Oregon State University</h4>
+                                        <h4 className="text-primary">Oregon State University</h4>
                                     </div>
                                     <div className='row'>
                                         <h5>B.S. in Computer Science</h5>
@@ -67,7 +71,7 @@ class AboutMe extends Component {
                             <div className="col-md" style={divStyles}>
                                 <div className="container">
                                     <div className='row'>                                
-                                        <h4 className='text-dark'>University of Wisconsin, Madison</h4>
+                                        <h4 className='text-primary'>University of Wisconsin, Madison</h4>
                                     </div>
                                     <div className='row'>
                                         <h5>B.S. in Nuclear Engineering with minors in Mathematics and German Language</h5>
