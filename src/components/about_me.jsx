@@ -35,7 +35,7 @@ class AboutMe extends Component {
                 </div>
                 <br></br>
                 <div className="row m-2">
-                    <h1>Education</h1>
+                    <h1 className='text-center text-secondary'>Education</h1>
                     <div className="container m-1">
                         <div className="row">
                             <div className="col-lg">
@@ -83,7 +83,7 @@ class AboutMe extends Component {
                 </div>
 
                 <div className="row p-1">
-                    <h1>Work Experience</h1>
+                    <h1 className='text-center text-secondary'>Work Experience</h1>
                     <h2 className='text-primary text-center'>QGenda</h2>
                     <div id="QGenda_Experience">
                         <div className='container'>
