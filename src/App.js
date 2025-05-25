@@ -1,144 +1,52 @@
-import React, { Component } from 'react';
-import AboutMe from './components/about_me';
-import BuildersGame from './components/builders_game';
-import Footer from './components/footer';
-import Headerbar from './components/headerbar';
+import React from 'react';
+import './css/App.css';
+import profilePic from './images/self_picture.jpg';
+import githubIcon from './images/icons/github.svg';
+import linkedinIcon from './images/icons/linkedin.svg';
 
-const unselectedClassNav = 'btn btn-light m-1 text-dark';
-const selectedClassNav = 'btn btn-primary m-1 text-light';
-const unselectedClassExp = 'btn btn-light m-1 p-1 text-dark';
-const selectedClassExp = 'btn btn-primary m-1 p-1 text-light';
-
-class App extends Component {
-
-  state = {
-    navbaritems: {
-      aboutMe : {
-        id: 'about',
-        hidden: false,
-        classes: selectedClassNav
-      },
-      buildersGame: {
-        id: 'buildersGame',
-        hidden: true,
-        classes: unselectedClassNav
-      }
-    },
-    experience : {
-      director: {
-          id: 'director',
-          title: 'Director, Customer Success',
-          hidden: false,
-          classes: selectedClassExp,
-          duration: 'July 2021 - Present',
-          details: [
-            'Aggregate customer feedback for 10,000+ users on application',
-            'Liaison to Product Team for biweekly sprint planning',
-            'Enhance QA automated test coverage alongside continued identification and/or triage for product/system issues',
-            'Collaborate with executive leadership on product strategies',
-            'Automated team processes with Javascript & GScript tools'
-          ]
-      },
-      manager: {
-          id: 'manager',
-          title: 'Manager, Customer Success',
-          hidden: true,
-          classes: unselectedClassExp,
-          duration: 'January 2020 - June 2021',
-          details: [
-            'Collect, prioritize, and develop initial requirements for new product functionality based on customer feedback',
-            'Drive process optimization and scalability of optional add-ons providing a key solution to customer retention',
-            'Collaborate with cross-functional partner teams, creating key planning solutions and supporting technology'
-          ]
-      },
-      supervisor: {
-          id: 'supervisor',
-          title: 'Supervisor, Customer Success',
-          hidden: true,
-          classes: unselectedClassExp,
-          duration: 'April 2018 - December 2019',
-          details: [
-            'Developed tools in Microsoft Excel VBA and Google Sheets GScript, working independently with teams',
-            'Leveraged expertise with Microsoft and GScript to automate core processes, saving 100+ hours per month',
-            'Met with executive leadership to align and measure development efforts with overall business objectives'
-          ]
-      },
-      accountConsult: {
-          id: 'accountConsult',
-          title: 'Account Consultant',
-          hidden: true,
-          classes: unselectedClassExp,
-          duration: 'January 2016 - March 2018',
-          details: [
-            'Demonstrated technical knowledge, leading and presenting with customer executive teams',
-            'Contributed to High Value Client implementations',
-            'Developed and shared VBA/GScript automation tools for customer success team'
-          ]
-      },
-      softConsult: {
-          id: 'softConsult',
-          title: 'Software Consultant',
-          hidden: true,
-          classes: unselectedClassExp,
-          duration: 'July 2015 - December 2015',
-          details: [
-            'Leveraged technical expertise, working within software configuration constraints to find creative solutions',
-            'Applied a learning mindset to professional development, learning VBA and JavaScript to automate team tasks'
-          ]
-      }
-    }
-  };
-
-  render() {
-    return (
-      <React.Fragment>
-        <Headerbar 
-            onClick = {this.handleDisplay}
-            navbaritems = {this.state.navbaritems}
-        />
-        <div hidden={this.state.navbaritems.aboutMe.hidden}>
-          <AboutMe
-            onClick = {this.handleDisplay}
-            experience = {this.state.experience}
-          />
+function App() {
+  return (
+    <div className="container">
+      <div className="content">
+        <div className="header-section">
+          <div className="profile-image">
+            <img src={profilePic} alt="Brandon Lenz" />
+          </div>
+          <div className="header-text">
+            <h1>Brandon Lenz</h1>
+            <h2>Senior Director, CX Automation and AI @ <a href="https://www.qgenda.com/" target="_blank" rel="noopener noreferrer">QGenda</a></h2>
+          </div>
         </div>
-        <div hidden={this.state.navbaritems.buildersGame.hidden}>
-          <BuildersGame />
+        
+        <div className="social-links">
+          <a href="https://github.com/brandonlenz" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <img src={githubIcon} alt="GitHub" />
+          </a>
+          <a href="https://linkedin.com/in/brandonlenz-pmp" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img src={linkedinIcon} alt="LinkedIn" />
+          </a>
         </div>
-        <div style={{minHeight:75}} />
-        <Footer /> 
-      </React.Fragment>
-    );
-  };
 
-  handleDisplay = (clickedEle, interactedComp) => {
-    const newObjectCopy = Object(this.state[interactedComp]);
-    const stateKeys = Object.keys(newObjectCopy);
-    let thisSelect, thisUnselect;
-    
-    // Dynamicaly update which parts of the buttons we're working with
-    if (interactedComp === 'navbaritems') {
-      thisSelect = selectedClassNav
-      thisUnselect = unselectedClassNav
-    } else if (interactedComp === 'experience') {
-      thisSelect = selectedClassExp
-      thisUnselect = unselectedClassExp
-    }
-    
-    for (let i = 0; i < stateKeys.length; i++) {
-      const thiskey = stateKeys[i];
-      if (clickedEle === thiskey) {
-        newObjectCopy[thiskey].hidden = false;
-        newObjectCopy[thiskey].classes = thisSelect;
-      } else {
-        newObjectCopy[thiskey].hidden = true;
-        newObjectCopy[thiskey].classes = thisUnselect;
-      }
-    };
-    
-    this.setState({ interactedComp, newObjectCopy });
-  };
-
+        <div className="about-section">
+          <h3>👋 Hello, World! I'm Brandon.</h3>
+          
+          <div className="whoami">
+            <h4>Who I am</h4>
+            <ul>
+              <li>🖥️ Experienced technical leader in software implementation, automation, and AI impact</li>
+              <li>☢️ Nuclear Engineering graduate from the University of Wisconsin - Madison</li>
+              <li>📚 Computer Science graduate from Oregon State University</li>
+              <li>🎯 PMP certified professional with experience in project management</li>
+              <li>💡 Passionate about building scalable and efficient solutions</li>
+            </ul>
+          </div>
+        </div>
+        <div className="contact-blurb">
+          <p>If you want to get in touch, reach out to <a href="mailto:Brandon@BrandonLenz.dev">Brandon@BrandonLenz.dev</a></p>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default App;
