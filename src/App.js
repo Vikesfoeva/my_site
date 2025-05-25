@@ -19,7 +19,7 @@ function App() {
         </div>
         
         <div className="social-links">
-          <a href="https://github.com/brandonlenz" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <a href="https://github.com/Vikesfoeva" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <img src={githubIcon} alt="GitHub" />
           </a>
           <a href="https://linkedin.com/in/brandonlenz-pmp" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
