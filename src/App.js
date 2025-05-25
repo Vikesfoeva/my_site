@@ -33,9 +33,9 @@ function App() {
           <div className="whoami">
             <h4>Who I am</h4>
             <ul>
-              <li>🖥️ Experienced technical leader in software implementation, automation, and AI impact</li>
-              <li>☢️ Nuclear Engineering graduate from the University of Wisconsin - Madison</li>
-              <li>📚 Computer Science graduate from Oregon State University</li>
+              <li>👨‍💻 Experienced technical leader in software implementation, automation, and AI impact</li>
+              <li>☢️ Nuclear Engineering graduate from <a href="https://www.wisc.edu/" target="_blank" rel="noopener noreferrer">University of Wisconsin - Madison</a></li>
+              <li>💻 Computer Science graduate from <a href="https://oregonstate.edu/" target="_blank" rel="noopener noreferrer">Oregon State University</a></li>
               <li>🎯 PMP certified professional with experience in project management</li>
               <li>💡 Passionate about building scalable and efficient solutions</li>
             </ul>
