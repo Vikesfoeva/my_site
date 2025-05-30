@@ -3,13 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <META name="robots" CONTENT="noindex,nofollow">
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="The personal portfolio of Brandon Lenz, showcasing software development projects, skills in React, Tailwind CSS, and more." />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Brandon Lenz - Developer</title>
+    <title>Brandon Lenz - Software Developer Portfolio</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Brandon Lenz",
+        "url": "https://brandonlenz.dev",
+        "jobTitle": "Software Developer",
+        "knowsAbout": ["React", "Tailwind CSS", "JavaScript", "Web Development"]
+      }
+    </script>
   </head>
   <body class="p-3 mb-2 bg-dark text-light">
     <noscript>You need to enable JavaScript to run this app.</noscript>
