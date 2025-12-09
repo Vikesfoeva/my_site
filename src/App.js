@@ -42,7 +42,7 @@ function App() {
           </div>
         </div>
         <div className="contact-blurb">
-          <p>If you want to get in touch, reach out to <a href="mailto:Brandon@BrandonLenz.dev">Brandon@BrandonLenz.dev</a></p>
+          <p>If you want to get in touch, reach out to <a href="mailto:Brandon@BrandonLenz.ai">Brandon@BrandonLenz.ai</a></p>
         </div>
       </div>
     </div>
