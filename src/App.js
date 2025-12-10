@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './css/App.css';
 import profilePic from './images/self_picture.jpg';
 import githubIcon from './images/icons/github.svg';
 import linkedinIcon from './images/icons/linkedin.svg';
 
 function App() {
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText('brandon@brandonlenz.ai');
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <div className="container">
       <div className="content">
@@ -41,8 +49,21 @@ function App() {
             </ul>
           </div>
         </div>
-        <div className="contact-blurb">
-          <p>If you want to get in touch, reach out to <a href="mailto:Brandon@BrandonLenz.ai">Brandon@BrandonLenz.ai</a></p>
+        <div className="contact-section">
+          <p className="contact-intro">Ready to collaborate?</p>
+          
+          <button 
+            onClick={copyEmail} 
+            className={`btn-email ${copied ? 'copied' : ''}`}
+            aria-label="Copy email address to clipboard"
+          >
+            <span className="btn-text">
+              {copied ? '✓ Copied!' : '✉️ brandon@brandonlenz.ai'}
+            </span>
+            
+            {/* Tooltip: Only renders if NOT copied yet to keep UI clean */}
+            {!copied && <span className="tooltip">Click to copy</span>}
+          </button>
         </div>
       </div>
     </div>

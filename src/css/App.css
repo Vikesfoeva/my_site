@@ -159,14 +159,114 @@ h4 {
   }
 }
 
-.contact-blurb {
-  margin-top: 2.5rem;
-  font-size: 1.1rem;
-  color: #fff;
+/* Container spacing */
+.contact-section {
+  text-align: center;
+  margin: 40px 0;
 }
 
-.contact-blurb a {
-  color: #4da3ff;
-  text-decoration: underline;
-  word-break: break-all;
-} 
+.contact-intro {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* --- Button Core Styles --- */
+.btn-email {
+  position: relative; /* Anchors the tooltip */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 2px solid #0366d6;
+  color: #0366d6;
+  padding: 12px 28px;
+  border-radius: 50px; /* Fully rounded pill shape */
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  
+  /* Entrance Animation */
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.5s; /* Wait for other content to load */
+}
+
+/* Hover State: Invert colors */
+.btn-email:hover {
+  background-color: #0366d6;
+  color: #fff;
+  transform: translateY(-1px); /* Subtle lift */
+  box-shadow: 0 4px 12px rgba(3, 102, 214, 0.2);
+}
+
+/* Active/Click State */
+.btn-email:active {
+  transform: translateY(0);
+}
+
+/* Success State (Optional styling when copied) */
+.btn-email.copied {
+  border-color: #28a745;
+  color: #28a745;
+  background-color: transparent;
+  cursor: default;
+}
+
+/* --- Tooltip Styles --- */
+.tooltip {
+  position: absolute;
+  bottom: 140%; /* Starts slightly higher */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  background-color: #333; /* Dark tooltip */
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none; /* Prevents tooltip from blocking clicks */
+  
+  /* Animation Setup */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+/* The little arrow pointing down */
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* Bottom of tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+/* Reveal Tooltip on Hover */
+/* We use the button's hover state to trigger the tooltip inside it */
+.btn-email:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  bottom: 125%; /* Slides down slightly into position */
+}
+
+/* --- Animations --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
