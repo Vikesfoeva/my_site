@@ -2,6 +2,9 @@
 
 Welcome to my personal website! This is a digital home where I share a bit about myself and my professional journey.
 
+## Live Site
+[brandonlenz.ai](https://brandonlenz.ai)
+
 ## About This Website
 
 This website serves as my online presence, showcasing:
