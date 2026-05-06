@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://brandonlenz.dev/sitemap.xml
+Sitemap: https://brandonlenz.ai/sitemap.xml

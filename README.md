@@ -55,4 +55,4 @@ npm run build
 Firebase is configured to serve `index.html` for all routes (see `firebase.json`).
 
 ## Contact
-To get in touch, email: [Brandon@BrandonLenz.dev](mailto:Brandon@BrandonLenz.dev)
+To get in touch, email: [brandon@brandonlenz.ai](mailto:brandon@brandonlenz.ai)
