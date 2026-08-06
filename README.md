@@ -15,6 +15,7 @@ This website serves as my online presence, showcasing:
   - Nuclear Engineering degree from the University of Wisconsin - Madison
   - Computer Science degree from Oregon State University
   - PMP certified professional
+  - Google Cloud Certified Associate Cloud Engineer
 
 - **Connect With Me**: Direct links to my GitHub and LinkedIn profiles, plus contact information for professional inquiries and collaboration opportunities.
 

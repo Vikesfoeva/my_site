@@ -45,6 +45,7 @@ function App() {
               <li>☢️ Nuclear Engineering graduate from <a href="https://www.wisc.edu/" target="_blank" rel="noopener noreferrer">University of Wisconsin - Madison</a></li>
               <li>💻 Computer Science graduate from <a href="https://oregonstate.edu/" target="_blank" rel="noopener noreferrer">Oregon State University</a></li>
               <li>🎯 PMP certified professional with experience in project management</li>
+              <li>☁️ Google Cloud Certified <a href="https://www.credly.com/badges/4bef9ab8-e5f2-44ef-aa76-63f000975f30" target="_blank" rel="noopener noreferrer">Associate Cloud Engineer</a></li>
               <li>💡 Passionate about building scalable and efficient solutions</li>
             </ul>
           </div>
