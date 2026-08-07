@@ -29,7 +29,7 @@ The site is designed with a minimalist aesthetic—clean, modern, and responsive
 
 ## Getting Started
 
-### Development
+### Development:
 1. Install dependencies:
    ```bash
    npm install
