@@ -30,7 +30,7 @@ function App() {
           <a href="https://github.com/Vikesfoeva" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <img src={githubIcon} alt="GitHub" />
           </a>
-          <a href="https://linkedin.com/in/brandonlenz-pmp" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <a href="https://linkedin.com/in/brandon-lenz-ai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <img src={linkedinIcon} alt="LinkedIn" />
           </a>
         </div>
